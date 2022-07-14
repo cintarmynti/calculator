@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .btn-white {
+        @apply bg-white w-16 lg:w-32 h-16 text-grayish-blue rounded-lg;
+    }
+
+    .btn-gray{
+        @apply bg-light-blue h-16 text-white rounded-lg
+
+    }
+
+    button{
+        box-shadow: 0px 8px 15px  rgba(147, 17, 224, 0.1);
+    }
+}
