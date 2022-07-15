@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    :root{
+        --color-text-display : #ffffff;
+        --color-text-button : #637097;
+    }
+
+}
+
 @layer components{
     .btn-white {
         @apply bg-white w-16 lg:w-32 h-16 text-grayish-blue rounded-lg;
@@ -16,3 +24,4 @@
         box-shadow: 0px 8px 15px  rgba(147, 17, 224, 0.1);
     }
 }
+

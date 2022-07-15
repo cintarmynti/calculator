@@ -27,48 +27,169 @@
       color: hsl(228, 45%, 44%);
     }
 
+    .redButton.horizTranslate2 {
+      -webkit-transition: -webkit-transform 0.1s linear;
+      -webkit-transform: translateX(20px);
+    }
 
+    .redButton.horizTranslate3 {
+      -webkit-transition: -webkit-transform 0.1s linear;
+      -webkit-transform: translateX(40px);
+    }
 
-    
+    .redButton.horizTranslate1 {
+      -webkit-transition: -webkit-transform 0.1s linear;
+      -webkit-transform: translateX(0px);
+    }
+
+    #outerContainer {
+      position: relative;
+      width: 111px;
+      height: 98px;
+      /* background-color: #4A5B7E; */
+    }
+
+    #buttonContainer {
+      background-color: #222D41;
+      width: 71px;
+      height: 28px;
+      position: relative;
+      left: 20px;
+      top: 45px;
+      border-radius: 14px;
+    }
+
+    .redButton {
+      width: 16px;
+      height: 16px;
+      background-color: #DB3D2B;
+      border-radius: 8px;
+      position: relative;
+      top: 6px;
+      left: 6px;
+    }
+
+    #legendTextContainer {
+      left: 22px;
+      display: inline-block;
+      position: absolute;
+      top: 23px;
+      color: #ffffff;
+      font-family: Arial;
+      font-size: 10pt;
+      text-align: center;
+    }
+
+    .legendText {
+      display: inline-block;
+      width: 20px;
+      padding-bottom: 33px;
+      cursor: default;
+      user-select: none;
+    }
+
+    #message {
+      border: 1px solid #cccccc;
+      display: inline-block;
+      padding: 4px;
+      margin-top: 6px;
+      font-family: Arial;
+      font-size: 10pt;
+    }
   </style>
 </head>
 
 <body class="bg-darklight-blue font-league lg:px-96 px-5">
-  
+
+  <div class="flex items-center justify-between">
+    <p class="text-white text-3xl">calc</p>
+    <div class="flex items-center">
+      <p class="text-white">THEME</p>
+      <div id="outerContainer">
+        <div id="buttonContainer">
+          <div class="redButton"></div>
+        </div>
+
+        <div id="legendTextContainer">
+          <div class="legendText" onclick="go_to_1()">1</div>
+          <div class="legendText" onclick="go_to_2()">2</div>
+          <div class="legendText" onclick="go_to_3()">3</div>
+        </div>
+      </div>
+    </div>
+    <div id="message">Switch is in position 1</div>
+  </div>
   <!-- display layar  -->
- 
-    <form name="form" class="w-full">
-      <input type="textarea" id="display" value="" class="w-full text-white text-end text-3xl px-16 bg-verydark-blue h-20 grid content-center my-8 rounded-xl">
-    </form>
-    
- 
 
-  <div  class="bg-dark-blue grid grid-cols-4 gap-4 p-5 rounded-xl">
-    <button type="button" onclick="insert(7)" class="btn-white"><p class="text-3xl">7</p></button>
-    <button type="button" onclick="insert(8)" class="btn-white"><p class="text-3xl">8</p></button>
-    <button type="button" onclick="insert(9)" class="btn-white"><p class="text-3xl">9</p></button>
-    <button type="button" onclick="back()" class=" w-16 lg:w-32 h-16 btn-gray"><p class="text-3xl">DEL</p></button>
+  <form name="form" class="w-full">
+    <input type="textarea" id="display" value=""
+      class="w-full text-white text-end text-3xl px-16 bg-verydark-blue h-20 grid content-center my-8 rounded-xl">
+  </form>
 
-    <button type="button" onclick="insert(4)" class="btn-white"><p class="text-3xl">4</p></button>
-    <button type="button" onclick="insert(5)" class="btn-white"><p class="text-3xl">5</p></button>
-    <button type="button" onclick="insert(6)" class="btn-white"><p class="text-3xl">6</p></button>
-    <button type="button" onclick="insert('+')" class="btn-white"><p class="text-3xl">+</p></button>
 
-    <button type="button" onclick="insert(1)" class="btn-white"><p class="text-3xl">1</p></button>
-    <button type="button" onclick="insert(2)" class="btn-white"><p class="text-3xl">2</p></button>
-    <button type="button" onclick="insert(3)" class="btn-white"><p class="text-3xl">3</p></button>
-    <button type="button" onclick="insert('-')" class="btn-white"><p class="text-3xl">-</p></button>
 
-    <button type="button" onclick="insert('.')" class="btn-white"><p class="text-3xl">.</p></button>
-    <button type="button" onclick="insert(0)" class="btn-white"><p class="text-3xl">0</p></button>
-    <button type="button" onclick="insert('/')" class="btn-white"><p class="text-3xl">/</p></button>
-    <button type="button" onclick="insert('*')" class="btn-white"><p class="text-3xl">x</p></button>
-    
-    <button type="button" onclick="clean()" class="col-span-2 w-38 btn-gray" ><p class="text-3xl">RESET</p></button>
-    <button type="button" onclick="equal()" class="col-span-2 w-38 bg-red h-16 text-white rounded-lg" ><p class="text-3xl">=</p></button>
+  <div class="bg-dark-blue grid grid-cols-4 gap-4 p-5 rounded-xl">
+    <button type="button" onclick="insert(7)" class="btn-white">
+      <p class="text-3xl">7</p>
+    </button>
+    <button type="button" onclick="insert(8)" class="btn-white">
+      <p class="text-3xl">8</p>
+    </button>
+    <button type="button" onclick="insert(9)" class="btn-white">
+      <p class="text-3xl">9</p>
+    </button>
+    <button type="button" onclick="back()" class=" w-16 lg:w-32 h-16 btn-gray">
+      <p class="text-3xl">DEL</p>
+    </button>
+
+    <button type="button" onclick="insert(4)" class="btn-white">
+      <p class="text-3xl">4</p>
+    </button>
+    <button type="button" onclick="insert(5)" class="btn-white">
+      <p class="text-3xl">5</p>
+    </button>
+    <button type="button" onclick="insert(6)" class="btn-white">
+      <p class="text-3xl">6</p>
+    </button>
+    <button type="button" onclick="insert('+')" class="btn-white">
+      <p class="text-3xl">+</p>
+    </button>
+
+    <button type="button" onclick="insert(1)" class="btn-white">
+      <p class="text-3xl">1</p>
+    </button>
+    <button type="button" onclick="insert(2)" class="btn-white">
+      <p class="text-3xl">2</p>
+    </button>
+    <button type="button" onclick="insert(3)" class="btn-white">
+      <p class="text-3xl">3</p>
+    </button>
+    <button type="button" onclick="insert('-')" class="btn-white">
+      <p class="text-3xl">-</p>
+    </button>
+
+    <button type="button" onclick="insert('.')" class="btn-white">
+      <p class="text-3xl">.</p>
+    </button>
+    <button type="button" onclick="insert(0)" class="btn-white">
+      <p class="text-3xl">0</p>
+    </button>
+    <button type="button" onclick="insert('/')" class="btn-white">
+      <p class="text-3xl">/</p>
+    </button>
+    <button type="button" onclick="insert('*')" class="btn-white">
+      <p class="text-3xl">x</p>
+    </button>
+
+    <button type="button" onclick="clean()" class="col-span-2 w-38 btn-gray">
+      <p class="text-3xl">RESET</p>
+    </button>
+    <button type="button" onclick="equal()" class="col-span-2 w-38 bg-red h-16 text-white rounded-lg">
+      <p class="text-3xl">=</p>
+    </button>
 
   </div>
- 
+
 
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
@@ -82,51 +203,64 @@
   let inputan = document.getElementById("display");
 
   //insert angka textview
-function insert(num){
-  console.log(num);
-  inputan.value = inputan.value + num;
- 
-}
+  function insert(num) {
+    console.log(num);
+    inputan.value = inputan.value + num;
+  }
 
-//fungsi hitung
-function equal(){
+  //fungsi hitung
+  function equal() {
     var hasil = inputan;
     inputan.value = eval(inputan.value);
-}
+  }
 
-//clean
-function clean(){
-   inputan.value = "";
-}
+  //clean
+  function clean() {
+    inputan.value = "";
+  }
 
-//delete
-function back(){
+  //delete
+  function back() {
     var hasil = inputan.value;
-    inputan.value = hasil.substring(0,hasil.length-1);
+    inputan.value = hasil.substring(0, hasil.length - 1);
+  }
+
+
+
+  let toggleSwitch = document.getElementsByClassName('redButton')[0]
+
+function go_to_1() {
+    toggleSwitch.classList.add('horizTranslate1');
+    toggleSwitch.classList.remove('horizTranslate2');
+    toggleSwitch.classList.remove('horizTranslate3');
+    document.getElementById("outerContainer").style.backgroundColor = "#4A5B7E"
+    document.getElementById("buttonContainer").style.backgroundColor = "#222D41"
+    document.getElementById("legendTextContainer").style.color = "#ffffff"
+    doStuff(1)
 }
 
-  // var buttons = document.getElementsByClassName("button");
-  // var arr = [...buttons];
+function go_to_2() {
+    toggleSwitch.classList.add('horizTranslate2');
+    toggleSwitch.classList.remove('horizTranslate3');
+    toggleSwitch.classList.remove('horizTranslate1');
+    document.getElementById("outerContainer").style.backgroundColor = "#E5E5E5"
+    document.getElementById("buttonContainer").style.backgroundColor = "#D3CCCA"
+    document.getElementById("legendTextContainer").style.color = "#222222"
+    doStuff(2)
+}
 
-  // arr.forEach((element, index) => {
-  //   element.addEventListener("click", () => {
-  //     element.style.opacity = "1";
-  //     if (index == 0) {
-  //       document.getElementsByTagName("body")[0].style.backgroundColor = "white";
-  //     } else if (index == 1) {
-  //       document.getElementsByTagName("body")[0].style.backgroundColor = "teal";
-  //     } else {
-  //       document.getElementsByTagName("body")[0].style.backgroundColor =
-  //         "rgb(92, 204, 125)";
-  //     }
-  //     arr
-  //       .filter(function (item) {
-  //         return item != element;
-  //       })
-  //       .forEach((item) => {
-  //         item.style.opacity = "0";
-  //       });
-  //   });
-  // });
+function go_to_3() {
+    toggleSwitch.classList.add('horizTranslate3');
+    toggleSwitch.classList.remove('horizTranslate2');
+    toggleSwitch.classList.remove('horizTranslate1');
+    document.getElementById("outerContainer").style.backgroundColor = "#000000"
+    document.getElementById("buttonContainer").style.backgroundColor = "#444444"
+    document.getElementById("legendTextContainer").style.color = "#E2D241"
+    doStuff(3)
+}
 
+function doStuff(n) {
+    document.getElementById("message").innerHTML = "Switch is in position " + n
+    //your code here...
+}
 </script>
