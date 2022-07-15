@@ -6,17 +6,48 @@
     :root{
         --color-text-display : #ffffff;
         --color-text-button : #637097;
+        --color-text-equal : #FFFAF6;
+        --color-button-number : #EAE3DB;
+        --color-button-del : #A2B3E1;
+        --color-button-equal : #F96C5B;
+        --color-indisplay : #181F32;
+        --color-outdisplay : #252D44;
+        --color-full : #3B4664;
+    }
+
+    .theme-white{
+        --color-text-display : #37372D;
+        --color-text-button : #32332D;
+        --color-text-equal : #FFFBEE;
+        --color-button-number : #E5E4E0;
+        --color-button-del : #62B5BD;
+        --color-button-equal : #FF8B38;
+        --color-indisplay : #EEEEEE;
+        --color-outdisplay : #D3CDCD;
+        --color-full : #E6E6E6;
+    }
+
+    .theme-purple{
+        --color-text-display : #F8E241;
+        --color-text-button : #FCE645;
+        --color-text-equal : #0E252B;
+        --color-button-number : #331B4D;
+        --color-button-del : #8631B0;
+        --color-button-equal : #94FFF9;
+        --color-indisplay : #1E0836;
+        --color-outdisplay: #1E0836;
+        --color-full : #17062A;
     }
 
 }
 
 @layer components{
     .btn-white {
-        @apply bg-white w-16 lg:w-32 h-16 text-grayish-blue rounded-lg;
+        @apply bg-skin-button-number text-skin-display w-16 lg:w-32 h-16  rounded-lg;
     }
 
-    .btn-gray{
-        @apply bg-light-blue h-16 text-white rounded-lg
+    .btn-del{
+        @apply  h-16 text-white bg-skin-button-del rounded-lg
 
     }
 

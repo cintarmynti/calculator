@@ -99,9 +99,9 @@
   </style>
 </head>
 
-<body class="bg-darklight-blue font-league lg:px-96 px-5">
+<body class="bg-skin-full theme-white font-league lg:px-96 px-5">
 
-  <div class="flex items-center justify-between">
+  <!-- <div class="flex items-center justify-between">
     <p class="text-white text-3xl">calc</p>
     <div class="flex items-center">
       <p class="text-white">THEME</p>
@@ -118,17 +118,17 @@
       </div>
     </div>
     <div id="message">Switch is in position 1</div>
-  </div>
+  </div> -->
   <!-- display layar  -->
 
   <form name="form" class="w-full">
     <input type="textarea" id="display" value=""
-      class="w-full text-white text-end text-3xl px-16 bg-verydark-blue h-20 grid content-center my-8 rounded-xl">
+      class="w-full text-skin-display text-end text-3xl px-16 bg-skin-indisplay h-20 grid content-center my-8 rounded-xl">
   </form>
 
 
 
-  <div class="bg-dark-blue grid grid-cols-4 gap-4 p-5 rounded-xl">
+  <div class="bg-skin-outdisplay grid grid-cols-4 gap-4 p-5 rounded-xl">
     <button type="button" onclick="insert(7)" class="btn-white">
       <p class="text-3xl">7</p>
     </button>
@@ -138,7 +138,7 @@
     <button type="button" onclick="insert(9)" class="btn-white">
       <p class="text-3xl">9</p>
     </button>
-    <button type="button" onclick="back()" class=" w-16 lg:w-32 h-16 btn-gray">
+    <button type="button" onclick="back()" class=" w-16 lg:w-32 h-16 btn-del">
       <p class="text-3xl">DEL</p>
     </button>
 
@@ -181,10 +181,10 @@
       <p class="text-3xl">x</p>
     </button>
 
-    <button type="button" onclick="clean()" class="col-span-2 w-38 btn-gray">
+    <button type="button" onclick="clean()" class="col-span-2 w-38 btn-del">
       <p class="text-3xl">RESET</p>
     </button>
-    <button type="button" onclick="equal()" class="col-span-2 w-38 bg-red h-16 text-white rounded-lg">
+    <button type="button" onclick="equal()" class="col-span-2 text-skin-equal w-38 bg-skin-button-equal h-16 text-white rounded-lg">
       <p class="text-3xl">=</p>
     </button>
 
