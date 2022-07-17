@@ -4,7 +4,7 @@
 
 @layer base {
     :root{
-        --color-text-display : #ffffff;
+        --color-text-display : #474c5c;
         --color-text-button : #637097;
         --color-text-equal : #FFFAF6;
         --color-button-number : #EAE3DB;

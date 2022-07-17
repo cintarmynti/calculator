@@ -8,7 +8,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="../src/script.js">
+  
   <link
     href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&family=Kumbh+Sans:wght@400;700&family=League+Spartan:wght@700&family=Public+Sans:wght@300;400;500&display=swap"
     rel="stylesheet">
@@ -99,9 +99,9 @@
   </style>
 </head>
 
-<body class="bg-skin-full theme-white font-league lg:px-96 px-5">
+<body class="bg-skin-full font-league lg:px-96 px-5">
 
-  <!-- <div class="flex items-center justify-between">
+  <div class="flex items-center justify-between h-10 lg:pt-4 pt-12">
     <p class="text-white text-3xl">calc</p>
     <div class="flex items-center">
       <p class="text-white">THEME</p>
@@ -117,8 +117,8 @@
         </div>
       </div>
     </div>
-    <div id="message">Switch is in position 1</div>
-  </div> -->
+    <!-- <div id="message">Switch is in position 1</div> -->
+  </div>
   <!-- display layar  -->
 
   <form name="form" class="w-full">
@@ -228,39 +228,48 @@
 
 
   let toggleSwitch = document.getElementsByClassName('redButton')[0]
+  let bodyStyle = document.getElementsByTagName('body')[0];
+  
 
 function go_to_1() {
+ 
+    bodyStyle.classList.remove('theme-white');
+    bodyStyle.classList.remove('theme-purple');
     toggleSwitch.classList.add('horizTranslate1');
     toggleSwitch.classList.remove('horizTranslate2');
     toggleSwitch.classList.remove('horizTranslate3');
-    document.getElementById("outerContainer").style.backgroundColor = "#4A5B7E"
+    // document.getElementById("outerContainer").style.backgroundColor = "#3B4664"
     document.getElementById("buttonContainer").style.backgroundColor = "#222D41"
     document.getElementById("legendTextContainer").style.color = "#ffffff"
-    doStuff(1)
+    // doStuff(1)
 }
 
 function go_to_2() {
+    bodyStyle.classList.add('theme-white');
+    bodyStyle.classList.remove('theme-purple');
     toggleSwitch.classList.add('horizTranslate2');
     toggleSwitch.classList.remove('horizTranslate3');
     toggleSwitch.classList.remove('horizTranslate1');
-    document.getElementById("outerContainer").style.backgroundColor = "#E5E5E5"
+    // document.getElementById("outerContainer").style.backgroundColor = "#E6E6E6"
     document.getElementById("buttonContainer").style.backgroundColor = "#D3CCCA"
     document.getElementById("legendTextContainer").style.color = "#222222"
-    doStuff(2)
+    // doStuff(2)
 }
 
 function go_to_3() {
+    bodyStyle.classList.remove('theme-white');
+    bodyStyle.classList.add('theme-purple');
     toggleSwitch.classList.add('horizTranslate3');
     toggleSwitch.classList.remove('horizTranslate2');
     toggleSwitch.classList.remove('horizTranslate1');
-    document.getElementById("outerContainer").style.backgroundColor = "#000000"
+    // document.getElementById("outerContainer").style.backgroundColor = "#17062A"
     document.getElementById("buttonContainer").style.backgroundColor = "#444444"
     document.getElementById("legendTextContainer").style.color = "#E2D241"
-    doStuff(3)
+    // doStuff(3)
 }
 
-function doStuff(n) {
-    document.getElementById("message").innerHTML = "Switch is in position " + n
-    //your code here...
-}
+// function doStuff(n) {
+//     document.getElementById("message").innerHTML = "Switch is in position " + n
+//     //your code here...
+// }
 </script>
