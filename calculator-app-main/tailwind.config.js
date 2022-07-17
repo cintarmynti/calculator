@@ -10,7 +10,8 @@ module.exports = {
           skin: {
             display: 'var(--color-text-display)',
             button: 'var(--color-text-button)',
-            equal : 'var(--color-text-special)'
+            equal : 'var(--color-text-special)',
+            calc : 'var(--color-text-calc)'
           }
         },
         backgroundColor: {

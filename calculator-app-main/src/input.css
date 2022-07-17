@@ -4,6 +4,7 @@
 
 @layer base {
     :root{
+        --color-text-calc : #ffffff;
         --color-text-display : #474c5c;
         --color-text-button : #637097;
         --color-text-equal : #FFFAF6;
@@ -16,6 +17,7 @@
     }
 
     .theme-white{
+        --color-text-calc : #37372D;
         --color-text-display : #37372D;
         --color-text-button : #32332D;
         --color-text-equal : #FFFBEE;
@@ -28,6 +30,7 @@
     }
 
     .theme-purple{
+        --color-text-calc : #F8E241;
         --color-text-display : #F8E241;
         --color-text-button : #FCE645;
         --color-text-equal : #0E252B;

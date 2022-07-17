@@ -418,6 +418,7 @@ video {
 }
 
 :root{
+  --color-text-calc : #ffffff;
   --color-text-display : #474c5c;
   --color-text-button : #637097;
   --color-text-equal : #FFFAF6;
@@ -430,6 +431,7 @@ video {
 }
 
 .theme-white{
+  --color-text-calc : #37372D;
   --color-text-display : #37372D;
   --color-text-button : #32332D;
   --color-text-equal : #FFFBEE;
@@ -442,6 +444,7 @@ video {
 }
 
 .theme-purple{
+  --color-text-calc : #F8E241;
   --color-text-display : #F8E241;
   --color-text-button : #FCE645;
   --color-text-equal : #0E252B;
@@ -632,9 +635,9 @@ button{
   grid-column: span 2 / span 2;
 }
 
-.my-8 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+.my-7 {
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
 }
 
 .flex {
@@ -645,16 +648,16 @@ button{
   display: grid;
 }
 
+.h-10 {
+  height: 2.5rem;
+}
+
 .h-20 {
   height: 5rem;
 }
 
 .h-16 {
   height: 4rem;
-}
-
-.h-10 {
-  height: 2.5rem;
 }
 
 .w-full {
@@ -735,18 +738,6 @@ button{
   padding-right: 4rem;
 }
 
-.pt-2 {
-  padding-top: 0.5rem;
-}
-
-.pt-3 {
-  padding-top: 0.75rem;
-}
-
-.pt-4 {
-  padding-top: 1rem;
-}
-
 .pt-12 {
   padding-top: 3rem;
 }
@@ -764,11 +755,6 @@ button{
   line-height: 2.25rem;
 }
 
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -780,6 +766,10 @@ button{
 
 .text-skin-equal {
   color: var(--color-text-special);
+}
+
+.text-skin-calc {
+  color: var(--color-text-calc);
 }
 
 @media (min-width: 1024px) {
